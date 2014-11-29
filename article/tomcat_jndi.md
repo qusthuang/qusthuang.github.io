@@ -1,4 +1,5 @@
-<Resource name="jdbc/cbb_connection" auth="Container"
+
+\<Resource name="jdbc/cbb_connection" auth="Container"
    type="javax.sql.DataSource"
    driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
    url="jdbc:sqlserver://localhost:1433;DatabaseName=XXXXX"
