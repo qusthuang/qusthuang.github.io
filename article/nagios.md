@@ -128,4 +128,4 @@ allowed_hosts=127.0.0.1,192.168.1.165<br>
 tcp      0     0 0.0.0.0:5666            0.0.0.0:*               LISTEN      27753/nrpe<br>
  
 ###9.访问 http:/165主机ip/nagios,查看132（oracle）服务<br>
-http://dl.iteye.com/upload/attachment/0084/4052/486a92dc-be16-30e5-9bc1-183eea62fa9e.png
+![](http://dl.iteye.com/upload/attachment/0084/4052/486a92dc-be16-30e5-9bc1-183eea62fa9e.png)
