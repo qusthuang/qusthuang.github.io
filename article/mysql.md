@@ -1,101 +1,13 @@
 <div id="article_details" class="details">
-    <div class="article_title">   
-         <span class="ico ico_type_Repost"></span>
+ 
 
-# 
-        <span class="link_title">[
-        MySQL数据的主从复制、半同步复制和主主复制详解            
-        ](/goustzhu/article/details/9339621)</span>
-
-</div>
-
-        <div class="article_manage clearfix">
-        <div class="article_r">
-            <span class="link_postdate">2013-07-16 10:08</span>
-            <span class="link_view" title="阅读次数">14062人阅读</span>
-            <span class="link_comments" title="评论次数"> [评论](#comments)(0)</span>
-            <span class="link_collect tracking-ad" data-mod="popu_171"> [收藏](javascript:void(0); "收藏")</span>
-             <span class="link_report"> [举报](#report "举报")</span>
-
-        </div>
-    </div>
-    <div class="embody" style="display:none" id="embody">
-        <span class="embody_t">本文章已收录于：</span>
-        <div class="embody_c" id="lib" value="{&quot;err&quot;:0,&quot;msg&quot;:&quot;ok&quot;,&quot;data&quot;:[]}"></div>
-    </div>
-    <style type="text/css">        
-            .embody{
-                padding:10px 10px 10px;
-                margin:0 -20px;
-                border-bottom:solid 1px #ededed;                
-            }
-            .embody_b{
-                margin:0 ;
-                padding:10px 0;
-            }
-            .embody .embody_t,.embody .embody_c{
-                display: inline-block;
-                margin-right:10px;
-            }
-            .embody_t{
-                font-size: 12px;
-                color:#999;
-            }
-            .embody_c{
-                font-size: 12px;
-            }
-            .embody_c img,.embody_c em{
-                display: inline-block;
-                vertical-align: middle;               
-            }
-             .embody_c img{               
-                width:30px;
-                height:30px;
-            }
-            .embody_c em{
-                margin: 0 20px 0 10px;
-                color:#333;
-                font-style: normal;
-            }
-    </style>
-    <script type="text/javascript">
-        $(function () {
-            try
-            {
-                var lib = eval("("+$("#lib").attr("value")+")");
-                var html = "";
-                if (lib.err == 0) {
-                    $.each(lib.data, function (i) {
-                        var obj = lib.data[i];
-                        //html += '![]()' + obj.name + "&nbsp;&nbsp;";
-                        html += ' [';
-                        html += ' ![]()';
-                        html += ' _**' + obj.name + '**_';
-                        html += ' ]()';
-                    });
-                    if (html != "") {
-                        setTimeout(function () {
-                            $("#lib").html(html);                      
-                            $("#embody").show();
-                        }, 100);
-                    }
-                }      
-            } catch (err)
-            { }
-
-        });
-    </script>
-    <script type="text/javascript" src="http://static.blog.csdn.net/scripts/category.js"></script>  
+   
+    
+   
 
 <div id="article_content" class="article_content">
 
-一、[MySQL](http://lib.csdn.net/base/14 "MySQL知识库")复制概述
-
-&nbsp; &nbsp;⑴、MySQL数据的复制的基本介绍
-
-&nbsp; &nbsp;目前MySQL[数据库](http://lib.csdn.net/base/14 "MySQL知识库")已经占去数据库市场上很大的份额，其一是由于MySQL数据的开源性和高性能，当然还有重要的一条就是免费~不过不知道还能免费多久，不容乐观的未来，但是我们还是要能熟练掌握MySQL数据的[架构](http://lib.csdn.net/base/16 "大型网站架构知识库")和安全备份等功能，毕竟现在它还算是开源界的老大吧！
-
-&nbsp; &nbsp;MySQL数据库支持同步复制、单向、异步复制，在复制的过程中一个服务器充当主服务，而一个或多个服务器充当从服务器。主服务器将更新写入二进制日志文件，并维护文件的一个索引以跟踪日志循环。这些日志可以记录发送到从服务器的更新。当一个从服务器连接主服务器时，它通知主服务器从服务器在日志中读取的最后一次成功更新的位置。从服务器接收从那时起发生的任何更新，然后封锁并等待主服务器通知新的更新。
+MySQL数据库支持同步复制、单向、异步复制，在复制的过程中一个服务器充当主服务，而一个或多个服务器充当从服务器。主服务器将更新写入二进制日志文件，并维护文件的一个索引以跟踪日志循环。这些日志可以记录发送到从服务器的更新。当一个从服务器连接主服务器时，它通知主服务器从服务器在日志中读取的最后一次成功更新的位置。从服务器接收从那时起发生的任何更新，然后封锁并等待主服务器通知新的更新。
 
 请注意当你进行复制时，所有对复制中的表的更新必须在主服务器上进行。否则，你必须要小心，以避免用户对主服务器上的表进行的更新与对从服务器上的表所进行的更新之间的冲突。
 
@@ -706,63 +618,13 @@ mysql&gt; CHANGE MASTER TO MASTER_HOST='172.16.7.1',MASTER_USER='chrislee',MASTE
 
 ![](http://img1.51cto.com/attachment/201305/215419915.png "图像 35.png")
 
-转载自：http://chrinux.blog.51cto.com/6466723/1204586
+
 
 </div>
 
-<!-- Baidu Button BEGIN -->
 
-<div class="bdsharebuttonbox tracking-ad bdshare-button-style0-16" style="float: right;" data-mod="popu_172" data-bd-bind="1468314371856">
-[](#)
-[](# "分享到QQ空间")
-[](# "分享到新浪微博")
-[](# "分享到腾讯微博")
-[](# "分享到人人网")
-[](# "分享到微信")
-</div>
-<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
-<!-- Baidu Button END -->
 
-   <link rel="stylesheet" href="http://static.blog.csdn.net/css/blog_detail.css">
 
-<!--172.16.140.11-->
-
-<!-- Baidu Button BEGIN -->
-<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1536434" src="http://bdimg.share.baidu.com/static/js/bds_s_v2.js?cdnversion=407866"></script>
-
-<script type="text/javascript">
-    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
-</script>
-<!-- Baidu Button END -->
-
-        <div id="digg" articleid="9339621">
-            <dl id="btnDigg" class="digg digg_disable" onclick="btndigga();">
-
-                 <dt>顶</dt>
-                <dd>1</dd>
-            </dl>
-
-            <dl id="btnBury" class="digg digg_disable" onclick="btnburya();">
-
-                  <dt>踩</dt>
-                <dd>0</dd>               
-            </dl>
-
-        </div>
-     <div class="tracking-ad" data-mod="popu_222">[&nbsp;](javascript:void(0);)   </div>
-    <div class="tracking-ad" data-mod="popu_223"> [&nbsp;](javascript:void(0);)</div>
-    <script type="text/javascript">
-                function btndigga() {
-                    $(".tracking-ad[data-mod='popu_222'] a").click();
-                }
-                function btnburya() {
-                    $(".tracking-ad[data-mod='popu_223'] a").click();
-                }
-            </script>
-
-*   <span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian']);location.href='/goustzhu/article/details/8784870';">上一篇</span>[经典计算机书籍](/goustzhu/article/details/8784870)
-*   <span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian']);location.href='/goustzhu/article/details/9820393';">下一篇</span>[特殊二叉树程序](/goustzhu/article/details/9820393)
-
-    <div style="clear:both; height:10px;"></div>
+  
 
 </div>
